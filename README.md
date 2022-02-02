@@ -6,4 +6,4 @@ The underlying theory, cosmological observables and datasets (in particular Plan
 
 A patch with the modifications to RAMSES can be found [here](https://github.com/HAWinther/RamsesPatchApproxMGSolver) and the COLA code used can be found [here](https://github.com/HAWinther/MG-PICOLA-PUBLIC).
 
-Please feel free to [contact us](mailto:shahab.joudaki@physics.ox.ac.uk) if you have any questions.
+Please feel free to contact us at shahab.joudaki@physics.ox.ac.uk if you have any questions.
