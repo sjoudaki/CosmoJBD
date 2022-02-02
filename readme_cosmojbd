@@ -6,10 +6,10 @@ We provide a set of updated modules and associated data files in EFTCAMB and Cos
 constraining Jordan-Brans-Dicke (JBD) gravity.
 
 The linear perturbations for JBD gravity are included by modifying the files in the camb
-directory, such as equations_EFT.f90, EFT_main.f90, and EFT_functions.f90. The nonlinear
-corrections to the Weyl and matter power spectra are obtained by calibrating
-HMCODE (camb/halofit_ppf.f90) to a hybrid suite of COLA and RAMSES N-body simulations
-in a JBD Universe.
+directory (in particular equations_EFT.f90, EFT_main.f90, EFT_functions.f90). The nonlinear
+corrections to the Weyl and matter power spectra are obtained by calibrating HMCODE
+(camb/halofit_ppf.f90) to a hybrid suite of COLA and RAMSES N-body simulations in a JBD
+Universe.
 
 Most of the observables require only minor additional modifications to the code (such as the
 growth rate in bao.f90). The file "source/CosmoJBD.f90" calculates the 3x2pt likelihood for
