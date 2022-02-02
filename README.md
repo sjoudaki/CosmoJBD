@@ -12,6 +12,6 @@ A patch with the modifications to RAMSES can be found [here](https://github.com/
 
 * Compile the code by executing "make clean", followed by "make" in the source directory. 
 
-* Then run the code with multiple chains and threads by executing "sbatch testjbd.sh".
+* Then run the code with multiple chains and threads by executing "sbatch testjbd.sh" in the main directory.
 
 Please feel free to [contact us](mailto:shahab.joudaki@physics.ox.ac.uk) if you have any questions.
