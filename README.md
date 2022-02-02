@@ -4,4 +4,6 @@ We release modified EFTCAMB and CosmoMC modules and associated data files to per
 
 The underlying theory, cosmological observables and datasets (in particular Planck, KiDS, 2dFLenS, BOSS, Pantheon), treatment of systematic uncertainties, analysis techniques, and fitting pipeline are presented in https://arxiv.org/abs/2010.15278. The central chains of the paper are available to [download from here](https://u.pcloud.link/publink/show?code=XZgKscXZgOPsJcYsiY8kDVFbNKIGiLSmoGTk).
 
+A patch with the modifications to RAMSES can be found [here](https://github.com/HAWinther/RamsesPatchApproxMGSolver) and the COLA code used can be found [here] (https://github.com/HAWinther/MG-PICOLA-PUBLIC).
+
 Please feel free to contact us at shahab.joudaki@physics.ox.ac.uk if you have any questions.
