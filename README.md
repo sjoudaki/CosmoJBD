@@ -6,4 +6,12 @@ The underlying theory, cosmological observables and datasets (in particular Plan
 
 A patch with the modifications to RAMSES can be found [here](https://github.com/HAWinther/RamsesPatchApproxMGSolver) and the COLA code used can be found [here](https://github.com/HAWinther/MG-PICOLA-PUBLIC).
 
+# Installation and use
+
+* The code requires OpenMP and Intel Fortran (ifort14 or higher). In order to use the Planck 2018 likelihood, a [separate installation](https://cosmologist.info/cosmomc/readme_planck.html) is needed. 
+
+* Compile the code by executing "make clean", followed by "make" in the source directory. 
+
+* Then run the code with multiple chains and threads by executing "sbatch testjbd.sh".
+
 Please feel free to contact us at shahab.joudaki@physics.ox.ac.uk if you have any questions.
