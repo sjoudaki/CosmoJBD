@@ -1,6 +1,6 @@
 # CosmoJBD
 
-We release modified [EFTCAMB](https://github.com/EFTCAMB) and [CosmoMC](https://github.com/cmbant/CosmoMC) modules and associated data files to perform a comprehensive cosmological analysis of Jordan-Brans-Dicke (JBD) gravity. The nonlinear corrections to the Weyl and matter power spectra are included in a modified [HMCODE](https://github.com/alexander-mead/HMcode) that we have calibrated to a hybrid suite of COLA and RAMSES _N_-body simulations. For further information, please see the readme file ("readme_cosmojbd").
+We release modified [EFTCAMB](https://github.com/EFTCAMB) and [CosmoMC](https://github.com/cmbant/CosmoMC) modules and associated data files to perform a comprehensive cosmological analysis of Jordan-Brans-Dicke (JBD) gravity. The nonlinear corrections to the Weyl and matter power spectra are included in a modified [HMCODE](https://github.com/alexander-mead/HMcode) that we have calibrated to a hybrid suite of COLA and RAMSES _N_-body simulations. For further information, please see the readme file ([readme_cosmojbd](https://github.com/sjoudaki/CosmoJBD/blob/main/readme_cosmojbd)).
 
 The underlying theory, cosmological observables and datasets (in particular Planck, KiDS, 2dFLenS, BOSS, Pantheon), treatment of systematic uncertainties, analysis techniques, and fitting pipeline are presented in [Joudaki, Ferreira, Lima, and Winther (2022)](https://arxiv.org/abs/2010.15278). The central chains of the paper are available to [download from here](https://u.pcloud.link/publink/show?code=XZgKscXZgOPsJcYsiY8kDVFbNKIGiLSmoGTk).
 
