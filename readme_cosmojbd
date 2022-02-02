@@ -38,12 +38,10 @@ use_bootstrapnz = F where the mean redshift distributions are used instead.
 
 MEASUREMENTS:
 
-The measurements, covariances, redshift distributions, and masking files are provided
-in data/lensingrsdfiles/.
-
-Both 2dFLenS and BOSS are restricted to the overlapping areas with KiDS-450, and divided into 
-`low-redshift' and `high-redshift' galaxy samples, covering $0.15 < z < 0.43$ (2dFLOZ, LOWZ) 
-and $0.43 < z < 0.70$ (2dFHIZ, CMASS). 
+The 3x2pt measurements, covariances, redshift distributions, and masking files are provided
+in data/lensingrsdfiles/. Both 2dFLenS and BOSS are restricted to the overlapping areas with
+KiDS-450, and divided into `low-redshift' and `high-redshift' galaxy samples, covering
+0.15 < z < 0.43 (2dFLOZ, LOWZ) and 0.43 < z < 0.70 (2dFHIZ, CMASS). 
 
 The files "bootstrapnz/nz_zi_kids_bootj.dat" contain the redshift distributions for 
 each tomographic bin i and bootstrap realization j, with format z n(z), where i runs 
