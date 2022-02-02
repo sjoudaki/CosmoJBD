@@ -1,0 +1,66 @@
+S. Joudaki, P.G. Ferreira, N. A. Lima, H. A. Winther (Nov 2020)
+
+CODE:
+
+We provide a set of updated modules and associated data files in EFTCAMB and CosmoMC for
+constraining Jordan-Brans-Dicke (JBD) gravity.
+
+The linear perturbations for JBD gravity are included by modifying the files in the camb
+directory, such as equations_EFT.f90, EFT_main.f90, and EFT_functions.f90. The nonlinear
+corrections to the Weyl and matter power spectra are obtained by calibrating
+HMCODE (camb/halofit_ppf.f90) to a hybrid suite of COLA and RAMSES N-body simulations
+in a JBD Universe.
+
+Most of the observables require only minor additional modifications to the code (such as the
+growth rate in bao.f90). The file "source/CosmoJBD.f90" calculates the 3x2pt likelihood for
+the KiDS, 2dFLenS, and BOSS datasets in a JBD cosmology. This includes the 2pt shear correlation
+functions \xi_+ and \xi_-, the galaxy-galaxy lensing angular cross-correlation \gamma_t, and the
+redshift-space multipole power spectra P_0 and P_2. The analysis pipeline allows for a higher
+density of ell-modes via "use_morell", and it allows for Romberg vs trapezoidal integration via
+"use_rombint" (where trapezoidal is much faster). These settings can be modified in
+data/CosmoJBD.dataset. 
+
+The 3x2pt code accounts for key systematic uncertainties associated with the intrinsic galaxy
+alignments, baryonic feedback (via HMCODE in camb/halofit_ppf.f90), photometric redshifts,
+shear calibration, galaxy bias, pairwise velocity dispersion, and shot noise. The intrinsic
+alignment amplitude is given by "ampia" and its redshift dependence is given by "redzia".
+The code also allows for a luminosity dependence "lumia". The priors on these parameters are
+set in batch2/kids2dflens.ini. The baryonic feedback amplitude is given by "baryfeed".
+The prior on this parameter is set in batch1/params_CMB_defaults_jbd.ini. 
+
+The photometric redshift uncertainties are accounted for by looping over the DIR bootstrap 
+realizations of the tomographic redshift distributions (see Hildebrandt et al 2017, 
+arXiv:1606.05338). The approach is set up in an example job submission script testjbd.sh.
+For each new run, the user needs to reset "samples = 0" in batch1/common_batch1_jbd.ini.
+For simpler runs where the photo-z uncertainties are not accounted for, one can enable 
+use_bootstrapnz = F where the mean redshift distributions are used instead.
+
+
+MEASUREMENTS:
+
+The measurements, covariances, redshift distributions, and masking files are provided
+in data/lensingrsdfiles/.
+
+Both 2dFLenS and BOSS are restricted to the overlapping areas with KiDS-450, and divided into 
+`low-redshift' and `high-redshift' galaxy samples, covering $0.15 < z < 0.43$ (2dFLOZ, LOWZ) 
+and $0.43 < z < 0.70$ (2dFHIZ, CMASS). 
+
+The files "bootstrapnz/nz_zi_kids_bootj.dat" contain the redshift distributions for 
+each tomographic bin i and bootstrap realization j, with format z n(z), where i runs 
+from 1 to 4 and j runs from 0 to 999.
+
+The full BOSS DR12 measurements and inverse covariance matrix of the Alcock-Paczynski
+effect, growth rate, and BAO distances are provided in data/sdss_BAO_RSD_DR12_meas.txt
+and data/sdss_BAO_RSD_DR12_invcov.txt thanks to Shadab Alam. The corresponding ini file
+is given by batch2/BAO_RSD_DR12.ini.
+
+
+ACKNOWLEDGEMENTS:
+
+If using our lensing/RSD code, please acknowledge:
+
+arXiv:2010.15278
+arXiv:1709.09135
+arXiv:1707.06627
+arXiv:1606.05338
+arXiv:1601.05786

@@ -1,0 +1,124 @@
+name = CosmoJBD
+
+#set to 0 for no masking of angular scales, 1 for fiducial masking, 
+#and -1 for keeping only 'large' scales (described in Joudaki et al 2018).
+#set to 3 for cosmic shear + galaxy-galaxy lensing + redshift-space galaxy clustering 
+#with KiDS-450 x {2dFLenS + BOSS}. Make sure to also modify the nuisance parameter priors
+#in batch2 between the shear-only and 3x2pt cases.
+set_scenario = 3
+
+#set to T for higher density of ell-modes (slower).
+use_morell = T
+
+#set to T to use Romberg integration and F for trapezoidal integration
+#(the latter is faster).
+use_rombint = F
+
+CMASS_NGC = %DATASETDIR%BOSSMultipoles/Beutler_et_al_2013_ps_cmass_DR11v1_NGC_111_212_114_Yamamoto_16000000_2000.dat
+CMASS_SGC = %DATASETDIR%BOSSMultipoles/Beutler_et_al_2013_ps_cmass_DR11v1_SGC_84_163_86_Yamamoto_5000000_2000.dat
+NGC_Cov = %DATASETDIR%BOSSMultipoles/Beutler_et_al_2013_cov_DR11b_QPM_NGC_999.dat
+SGC_Cov = %DATASETDIR%BOSSMultipoles/Beutler_et_al_2013_cov_DR11b_QPM_SGC_999.dat
+NGC_Cov_015 = %DATASETDIR%BOSSMultipoles/Beutler_et_al_2013_cov_DR11b_QPM_NGC_999_015.dat
+SGC_Cov_015 = %DATASETDIR%BOSSMultipoles/Beutler_et_al_2013_cov_DR11b_QPM_SGC_999_015.dat
+NGC_Cov_010 = %DATASETDIR%BOSSMultipoles/Beutler_et_al_2013_cov_DR11b_QPM_NGC_999_010.dat
+SGC_Cov_010 = %DATASETDIR%BOSSMultipoles/Beutler_et_al_2013_cov_DR11b_QPM_SGC_999_010.dat
+window1D_NGC = %DATASETDIR%BOSSMultipoles/Beutler_et_al_2013_window1D_cmass_DR11v1_NGC_111_212_114_Yamamoto_50000_800_normalised.dat
+window1D_SGC = %DATASETDIR%BOSSMultipoles/Beutler_et_al_2013_window1D_cmass_DR11v1_SGC_84_163_86_Yamamoto_60000_800_normalised.dat
+window2D_NGC = %DATASETDIR%BOSSMultipoles/Beutler_et_al_2013_window2D_cmass_DR11v1_NGC_111_212_114_Yamamoto_50000_80_800_normalised.dat
+window2D_SGC = %DATASETDIR%BOSSMultipoles/Beutler_et_al_2013_window2D_cmass_DR11v1_SGC_84_163_86_Yamamoto_60000_80_800_normalised.dat
+
+LOWZ_overlap_conv =  %DATASETDIR%Multipole_overlap/plconv_kids_regcomb_lowz_dk0pt05.dat
+CMASS_overlap_conv =  %DATASETDIR%Multipole_overlap/plconv_kids_regcomb_cmass_dk0pt05.dat
+2dfloz_overlap_conv =  %DATASETDIR%Multipole_overlap/plconv_kids_regcomb_2dflensloz_dk0pt05.dat
+2dfhiz_overlap_conv =  %DATASETDIR%Multipole_overlap/plconv_kids_regcomb_2dflenshiz_dk0pt05.dat
+
+region1_z0pt4_Cov = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.4_Cov.dat
+region1_z0pt8_Cov = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.8_Cov.dat
+region2_z0pt4_Cov = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.4_Cov.dat
+region2_z0pt8_Cov = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.8_Cov.dat
+region3_z0pt4_Cov = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.4_Cov.dat
+region3_z0pt8_Cov = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.8_Cov.dat
+region4_z0pt4_Cov = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.4_Cov.dat
+region4_z0pt8_Cov = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.8_Cov.dat
+region5_z0pt4_Cov = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.4_Cov.dat
+region5_z0pt8_Cov = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.8_Cov.dat
+region6_z0pt4_Cov = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.4_Cov.dat
+region6_z0pt8_Cov = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.8_Cov.dat
+
+region1_z0pt4_Cov1= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.4_Cov_0pt29.dat
+region1_z0pt8_Cov1= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.8_Cov_0pt29.dat
+region2_z0pt4_Cov1= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.4_Cov_0pt29.dat
+region2_z0pt8_Cov1= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.8_Cov_0pt29.dat
+region3_z0pt4_Cov1= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.4_Cov_0pt29.dat
+region3_z0pt8_Cov1= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.8_Cov_0pt29.dat
+region4_z0pt4_Cov1= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.4_Cov_0pt29.dat
+region4_z0pt8_Cov1= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.8_Cov_0pt29.dat
+region5_z0pt4_Cov1= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.4_Cov_0pt29.dat
+region5_z0pt8_Cov1= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.8_Cov_0pt29.dat
+region6_z0pt4_Cov1= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.4_Cov_0pt29.dat
+region6_z0pt8_Cov1= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.8_Cov_0pt29.dat
+
+region1_z0pt4_Cov2= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.4_Cov_0pt19.dat
+region1_z0pt8_Cov2= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.8_Cov_0pt19.dat
+region2_z0pt4_Cov2= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.4_Cov_0pt19.dat
+region2_z0pt8_Cov2= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.8_Cov_0pt19.dat
+region3_z0pt4_Cov2= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.4_Cov_0pt19.dat
+region3_z0pt8_Cov2= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.8_Cov_0pt19.dat
+region4_z0pt4_Cov2= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.4_Cov_0pt19.dat
+region4_z0pt8_Cov2= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.8_Cov_0pt19.dat
+region5_z0pt4_Cov2= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.4_Cov_0pt19.dat
+region5_z0pt8_Cov2= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.8_Cov_0pt19.dat
+region6_z0pt4_Cov2= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.4_Cov_0pt19.dat
+region6_z0pt8_Cov2= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.8_Cov_0pt19.dat
+
+region1_z0pt4_Cov3= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.4_Cov_0pt17.dat
+region1_z0pt8_Cov3= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.8_Cov_0pt17.dat
+region2_z0pt4_Cov3= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.4_Cov_0pt17.dat
+region2_z0pt8_Cov3= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.8_Cov_0pt17.dat
+region3_z0pt4_Cov3= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.4_Cov_0pt17.dat
+region3_z0pt8_Cov3= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.8_Cov_0pt17.dat
+region4_z0pt4_Cov3= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.4_Cov_0pt17.dat
+region4_z0pt8_Cov3= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.8_Cov_0pt17.dat
+region5_z0pt4_Cov3= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.4_Cov_0pt17.dat
+region5_z0pt8_Cov3= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.8_Cov_0pt17.dat
+region6_z0pt4_Cov3= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.4_Cov_0pt17.dat
+region6_z0pt8_Cov3= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.8_Cov_0pt17.dat
+
+region1_z0pt4_Cov4= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.4_Cov_0pt15.dat
+region1_z0pt8_Cov4= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.8_Cov_0pt15.dat
+region2_z0pt4_Cov4= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.4_Cov_0pt15.dat
+region2_z0pt8_Cov4= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.8_Cov_0pt15.dat
+region3_z0pt4_Cov4= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.4_Cov_0pt15.dat
+region3_z0pt8_Cov4= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.8_Cov_0pt15.dat
+region4_z0pt4_Cov4= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.4_Cov_0pt15.dat
+region4_z0pt8_Cov4= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.8_Cov_0pt15.dat
+region5_z0pt4_Cov4= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.4_Cov_0pt15.dat
+region5_z0pt8_Cov4= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.8_Cov_0pt15.dat
+region6_z0pt4_Cov4= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.4_Cov_0pt15.dat
+region6_z0pt8_Cov4= %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.8_Cov_0pt15.dat
+
+region1_z0pt4_data = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.4_P0P2.dat
+region1_z0pt8_data = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.8_P0P2.dat
+region2_z0pt4_data = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.4_P0P2.dat
+region2_z0pt8_data = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.8_P0P2.dat
+region3_z0pt4_data = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.4_P0P2.dat
+region3_z0pt8_data = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.8_P0P2.dat
+region4_z0pt4_data = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.4_P0P2.dat
+region4_z0pt8_data = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.8_P0P2.dat
+region5_z0pt4_data = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.4_P0P2.dat
+region5_z0pt8_data = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.8_P0P2.dat
+region6_z0pt4_data = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.4_P0P2.dat
+region6_z0pt8_data = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.8_P0P2.dat
+
+region1_z0pt4_WindowFn = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.4_WindowFn.dat
+region1_z0pt8_WindowFn = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region1_z0.8_WindowFn.dat
+region2_z0pt4_WindowFn = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.4_WindowFn.dat
+region2_z0pt8_WindowFn = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region2_z0.8_WindowFn.dat
+region3_z0pt4_WindowFn = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.4_WindowFn.dat
+region3_z0pt8_WindowFn = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region3_z0.8_WindowFn.dat
+region4_z0pt4_WindowFn = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.4_WindowFn.dat
+region4_z0pt8_WindowFn = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region4_z0.8_WindowFn.dat
+region5_z0pt4_WindowFn = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.4_WindowFn.dat
+region5_z0pt8_WindowFn = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region5_z0.8_WindowFn.dat
+region6_z0pt4_WindowFn = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.4_WindowFn.dat
+region6_z0pt8_WindowFn = %DATASETDIR%WiggleZ_multipole_data/WiggleZ_region6_z0.8_WindowFn.dat

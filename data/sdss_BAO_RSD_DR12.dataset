@@ -1,0 +1,18 @@
+#http://arxiv.org/abs/1312.4611
+
+name = BAORSDDR12
+
+
+num_bao = 9
+
+measurement_type = DV_over_rs F_AP f_sigma8 DV_over_rs F_AP f_sigma8 DV_over_rs F_AP f_sigma8
+
+bao_measurements_file = sdss_BAO_RSD_DR12_meas.txt
+#bao_measurement =  9.99463 0.412822 0.49749 12.6995 0.596594 0.457523 14.4818 0.74068 0.436148
+#bao_z = 0.38 0.38 0.38 0.51 0.51 0.51 0.61 0.61 0.61 
+
+bao_invcov_file = sdss_BAO_RSD_DR12_invcov.txt
+
+num_conflicts = 1
+type_conflict1 = BAO
+name_conflict1 = DR11CMASS
