@@ -11,14 +11,14 @@ corrections to the Weyl and matter power spectra are obtained by calibrating HMC
 (camb/halofit_ppf.f90) to a hybrid suite of COLA and RAMSES N-body simulations in a JBD
 Universe.
 
-Most of the observables require only minor additional modifications to the code (such as the
-growth rate in bao.f90). The file "source/CosmoJBD.f90" calculates the 3x2pt likelihood for
-the KiDS, 2dFLenS, and BOSS datasets in a JBD cosmology. This includes the 2pt shear correlation
-functions \xi_+ and \xi_-, the galaxy-galaxy lensing angular cross-correlation \gamma_t, and the
-redshift-space multipole power spectra P_0 and P_2. The analysis pipeline allows for a higher
-density of ell-modes via "use_morell", and it allows for Romberg vs trapezoidal integration via
-"use_rombint" (where trapezoidal is much faster). These settings can be modified in
-data/CosmoJBD.dataset. 
+Most of the observables require only minor additional modifications to the code (such as
+the growth rate in bao.f90). The file "source/CosmoJBD.f90" calculates the 3x2pt likelihood
+for the KiDS, 2dFLenS, and BOSS datasets in a JBD cosmology. This includes the 2pt shear
+correlation functions \xi_+ and \xi_-, the galaxy-galaxy lensing angular cross-correlation
+\gamma_t, and the redshift-space multipole power spectra P_0 and P_2. The analysis
+pipeline allows for a higher density of ell-modes via "use_morell", and it allows for
+Romberg vs trapezoidal integration via "use_rombint" (where trapezoidal is much faster).
+These settings can be modified in data/CosmoJBD.dataset. 
 
 The 3x2pt code accounts for key systematic uncertainties associated with the intrinsic galaxy
 alignments, baryonic feedback (via HMCODE in camb/halofit_ppf.f90), photometric redshifts,
@@ -38,10 +38,16 @@ use_bootstrapnz = F where the mean redshift distributions are used instead.
 
 MEASUREMENTS:
 
-The 3x2pt measurements, covariances, redshift distributions, and masking files are provided
-in data/lensingrsdfiles/. Both 2dFLenS and BOSS are restricted to the overlapping areas with
-KiDS-450, and divided into `low-redshift' and `high-redshift' galaxy samples, covering
-0.15 < z < 0.43 (2dFLOZ, LOWZ) and 0.43 < z < 0.70 (2dFHIZ, CMASS). 
+CosmoJBD allows for analyses with all of the datasets in the /data directory, such as
+the Planck CMB lensing and Pantheon supernova distances. In order to use the Planck
+CMB temperature and polarization data (and likelihood), a separate installation is
+needed (see https://cosmologist.info/cosmomc/readme_planck.html).
+
+The KiDSx{2dFLenS+BOSS} 3x2pt measurements, covariances, redshift distributions, and
+masking files are provided in data/lensingrsdfiles/. Both 2dFLenS and BOSS are here
+restricted to the overlapping areas with KiDS-450, and divided into `low-redshift'
+and `high-redshift' galaxy samples, covering 0.15 < z < 0.43 (2dFLOZ, LOWZ) and 
+0.43 < z < 0.70 (2dFHIZ, CMASS). 
 
 The files "bootstrapnz/nz_zi_kids_bootj.dat" contain the redshift distributions for 
 each tomographic bin i and bootstrap realization j, with format z n(z), where i runs 
