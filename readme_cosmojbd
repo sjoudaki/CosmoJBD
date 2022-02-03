@@ -49,8 +49,8 @@ files are provided in data/lensingrsdfiles/. Note that 2dFLenS is here restricte
 overlapping areas with KiDS-450, and divided into `low-redshift' and `high-redshift'
 galaxy samples, covering 0.15 < z < 0.43 (2dFLOZ) and 0.43 < z < 0.70 (2dFHIZ). We also
 provide the corresponding files for an analysis of KiDSx{2dFLenS+BOSS}, where both 2dFLenS
-and BOSS (composed of the LOWZ and CMASS samples) are restricted to the overlapping areas
-wih KiDS.
+and BOSS (itself composed of the LOWZ and CMASS samples) are restricted to the overlapping
+areas wih KiDS.
 
 The files "bootstrapnz/nz_zi_kids_bootj.dat" contain the redshift distributions for 
 each tomographic bin i and bootstrap realization j, with format z n(z), where i runs 
