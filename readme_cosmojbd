@@ -44,13 +44,13 @@ the Planck CMB lensing and Pantheon supernova distances. In order to use the Pla
 CMB temperature and polarization data (and likelihood), a separate installation is
 needed (see https://cosmologist.info/cosmomc/readme_planck.html).
 
-The KiDSx2dFLenS 3x2pt measurements, covariances, redshift distributions, and
-masking files are provided in data/lensingrsdfiles/. Note that 2dFLenS is here
-restricted to the overlapping areas with KiDS-450, and divided into `low-redshift'
-and `high-redshift' galaxy samples, covering 0.15 < z < 0.43 (2dFLOZ) and 
-0.43 < z < 0.70 (2dFHIZ). We also provide the corresponding files for an 
-analysis of KiDSx{2dFLenS+BOSS}, where both 2dFLenS and BOSS (composed of the
-LOWZ and CMASS samples) are restricted to the overlapping areas wih KiDS.
+The KiDSx2dFLenS 3x2pt measurements, covariances, redshift distributions, and masking
+files are provided in data/lensingrsdfiles/. Note that 2dFLenS is here restricted to the
+overlapping areas with KiDS-450, and divided into `low-redshift' and `high-redshift'
+galaxy samples, covering 0.15 < z < 0.43 (2dFLOZ) and 0.43 < z < 0.70 (2dFHIZ). We also
+provide the corresponding files for an analysis of KiDSx{2dFLenS+BOSS}, where both 2dFLenS
+and BOSS (composed of the LOWZ and CMASS samples) are restricted to the overlapping areas
+wih KiDS.
 
 The files "bootstrapnz/nz_zi_kids_bootj.dat" contain the redshift distributions for 
 each tomographic bin i and bootstrap realization j, with format z n(z), where i runs 
