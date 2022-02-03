@@ -3,7 +3,8 @@ S. Joudaki, P.G. Ferreira, N. A. Lima, H. A. Winther (Feb 2022)
 CODE:
 
 We provide a set of updated modules and associated data files in EFTCAMB and CosmoMC for
-constraining Jordan-Brans-Dicke (JBD) gravity.
+constraining Jordan-Brans-Dicke (JBD) gravity. A comprehensive description is provided
+in Joudaki, Ferreira, Lima, and Winther (2022), arXiv:2010.15278.
 
 The linear perturbations for JBD gravity are included by modifying the files in the camb
 directory (in particular equations_EFT.f90, EFT_main.f90, EFT_functions.f90). The nonlinear
@@ -13,7 +14,7 @@ Universe.
 
 Most of the observables require only minor additional modifications to the code (such as
 the growth rate in bao.f90). The file "source/CosmoJBD.f90" calculates the 3x2pt likelihood
-for the KiDS, 2dFLenS, and BOSS datasets in a JBD cosmology. This includes the 2pt shear
+for the KiDS and 2dFLenS datasets in a JBD cosmology. This includes the 2pt shear
 correlation functions \xi_+ and \xi_-, the galaxy-galaxy lensing angular cross-correlation
 \gamma_t, and the redshift-space multipole power spectra P_0 and P_2. The analysis
 pipeline allows for a higher density of ell-modes via "use_morell", and it allows for
@@ -29,7 +30,7 @@ set in batch2/kids2dflens.ini. The baryonic feedback amplitude is given by "bary
 The prior on this parameter is set in batch1/params_CMB_defaults_jbd.ini. 
 
 The photometric redshift uncertainties are accounted for by looping over the DIR bootstrap 
-realizations of the tomographic redshift distributions (see Hildebrandt et al 2017, 
+realizations of the tomographic redshift distributions (see Hildebrandt et al. 2017, 
 arXiv:1606.05338). The approach is set up in an example job submission script testjbd.sh.
 For each new run, the user needs to reset "samples = 0" in batch1/common_batch1_jbd.ini.
 For simpler runs where the photo-z uncertainties are not accounted for, one can enable 
@@ -43,11 +44,13 @@ the Planck CMB lensing and Pantheon supernova distances. In order to use the Pla
 CMB temperature and polarization data (and likelihood), a separate installation is
 needed (see https://cosmologist.info/cosmomc/readme_planck.html).
 
-The KiDSx{2dFLenS+BOSS} 3x2pt measurements, covariances, redshift distributions, and
-masking files are provided in data/lensingrsdfiles/. Both 2dFLenS and BOSS are here
+The KiDSx2dFLenS 3x2pt measurements, covariances, redshift distributions, and
+masking files are provided in data/lensingrsdfiles/. Note that 2dFLenS is here
 restricted to the overlapping areas with KiDS-450, and divided into `low-redshift'
-and `high-redshift' galaxy samples, covering 0.15 < z < 0.43 (2dFLOZ, LOWZ) and 
-0.43 < z < 0.70 (2dFHIZ, CMASS). 
+and `high-redshift' galaxy samples, covering 0.15 < z < 0.43 (2dFLOZ) and 
+0.43 < z < 0.70 (2dFHIZ). We also provide the corresponding files for an 
+analysis of KiDSx{2dFLenS+BOSS}, where both 2dFLenS and BOSS (composed of the
+LOWZ and CMASS samples) are restricted to the overlapping areas wih KiDS.
 
 The files "bootstrapnz/nz_zi_kids_bootj.dat" contain the redshift distributions for 
 each tomographic bin i and bootstrap realization j, with format z n(z), where i runs 
