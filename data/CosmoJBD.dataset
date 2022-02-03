@@ -2,7 +2,7 @@ name = CosmoJBD
 
 #set to 0 for cosmic shear with no masking of angular scales, 1 for fiducial masking, 
 #and -1 for keeping only 'large' scales (described in Joudaki et al 2018).
-#set to 3 for cosmic shear + galaxy-galaxy lensing + redshift-space galaxy clustering with
+#Set to 3 for cosmic shear + galaxy-galaxy lensing + redshift-space galaxy clustering with
 #KiDS-450 x 2dFLenS. This can be extended to KiDS-450 x {2dFLenS+BOSS} using the files provided
 #in data/lensingrsdfiles, but we recommend excluding BOSS here to include the full-area measurements
 #via the standalone likelihood instead (see data/sdss_BAO_RSD_DR12.dataset). Make sure to also modify 
